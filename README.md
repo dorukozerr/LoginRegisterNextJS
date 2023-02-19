@@ -12,3 +12,5 @@ MAIL_ADDRESS=""
 MAIL_PASSWORD=""
 SERVER_URL=""
 ```
+
+[Live Link](https://next-login-register-mongodb.vercel.app/)

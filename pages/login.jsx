@@ -87,7 +87,7 @@ export default function Login() {
           <>
             {verified !== 'true' ? (
               <Link href='/register'>
-                Don&apost you have an account ? <br />
+                Don&apos;t you have an account ? <br />
                 Register instead.
               </Link>
             ) : (
