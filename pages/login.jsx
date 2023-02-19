@@ -7,20 +7,19 @@ import { Puff } from 'react-loading-icons'
 export default function Login() {
   const router = useRouter()
   const { verified } = router.query
-  const {} = useContext(AuthContext)
+  const { setIsAuthorized } = useContext(AuthContext)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [isPwVisible, setIsPwVisible] = useState(false)
   const [isPending, setIsPending] = useState(false)
 
-  console.log(typeof verified, verified)
-
   return (
     <div className='authPageContainer'>
       <form
         onSubmit={e => {
           e.preventDefault()
+          setIsPending(true)
 
           const bodyObj = {
             email,
@@ -36,17 +35,20 @@ export default function Login() {
           })
             .then(res => res.json())
             .then(({ err, msg }) => {
+              setIsPending(false)
               if (err) {
                 setError(msg)
                 setTimeout(() => {
                   setError('')
                 }, 5000)
               } else {
+                setIsAuthorized(true)
                 localStorage.setItem('user', JSON.stringify(msg))
                 router.push('/')
               }
             })
             .catch(err => {
+              setIsPending(false)
               setError('Network Error')
               setTimeout(() => {
                 setError('')
