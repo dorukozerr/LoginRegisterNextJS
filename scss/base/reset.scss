@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-color-1;
+  color: $text-color-1;
+}
+
+button {
+  border: 1px solid transparent;
+  outline: none;
+  padding: 10px 30px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: $text-color-1;
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.25s ease all;
+
+  svg {
+    max-height: 16px;
+    max-width: 16px;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: $title-color;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

@@ -1,0 +1,38 @@
+header {
+  width: 100%;
+  max-width: 1440px;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .left,
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .left {
+    justify-content: flex-start;
+  }
+
+  .right {
+    justify-content: flex-end;
+
+    span {
+      cursor: pointer;
+    }
+  }
+}

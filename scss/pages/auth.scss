@@ -1,0 +1,91 @@
+.authPageContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 75px 50px;
+    gap: 25px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    margin: 100px;
+
+    .inputContainer {
+      width: 250px;
+      height: 40px;
+
+      input {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        color: $text-color-1;
+        font-size: 16px;
+        line-height: 16px;
+        padding: 10px 20px;
+      }
+    }
+
+    .switchbox {
+      align-self: flex-start;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+
+      .switchboxContainer {
+        width: 60px;
+        height: 30px;
+        border: 1px solid $text-color-1;
+        border-radius: 30px;
+        position: relative;
+        cursor: pointer;
+
+        .dot {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: $text-color-1;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 5px;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      .active {
+        background-color: $title-color;
+        border-color: $title-color;
+
+        .dot {
+          left: 35px;
+          background-color: $bg-color-1;
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+      text-align: center;
+      color: $title-color;
+    }
+
+    p {
+      text-align: center;
+      color: $text-color-2;
+    }
+  }
+}
